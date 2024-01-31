@@ -1,0 +1,24 @@
+@use 'sass:list';
+@import './colors';
+
+@function getThemeIndex($themeList, $theme) {
+  $themeIndex: list.index($themeList, $theme);
+
+  @if not $themeIndex {
+    @error "This theme is not supported";
+  }
+
+  @return $themeIndex;
+}
+
+
+// Allow to generate CSS variables for each color
+@mixin generateTheme($theme) {
+  $themeIndex: getThemeIndex($themes, $theme);
+
+  @each $name, $source in $colors {
+    $color: list.nth($source, $themeIndex);
+
+    --color-#{$name}: #{$color};
+  }
+}

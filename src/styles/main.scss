@@ -1,0 +1,11 @@
+@import './colors';
+@import './utils';
+
+:root {
+  @include generateTheme(light);
+
+
+  &[dark] {
+    @include generateTheme(dark);
+  }
+}
