@@ -9,12 +9,12 @@ export default defineConfig({
 
   server: {
     port: 4200,
-    host: 'localhost'
+    host: 'localhost',
   },
 
   preview: {
     port: 4300,
-    host: 'localhost'
+    host: 'localhost',
   },
 
   plugins: [react(), nxViteTsPaths()],
@@ -28,22 +28,23 @@ export default defineConfig({
     outDir: './dist/atelier-catmash',
     reportCompressedSize: true,
     commonjsOptions: {
-      transformMixedEsModules: true
-    }
+      transformMixedEsModules: true,
+    },
   },
 
   test: {
     globals: true,
     cache: {
-      dir: './node_modules/.vitest'
+      dir: './node_modules/.vitest',
     },
+    setupFiles: ['src/tests/setupTest.ts'],
     environment: 'jsdom',
     include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
 
     reporters: ['default'],
     coverage: {
       reportsDirectory: './coverage/atelier-catmash',
-      provider: 'v8'
-    }
-  }
+      provider: 'v8',
+    },
+  },
 });
