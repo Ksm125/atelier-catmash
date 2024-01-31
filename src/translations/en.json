@@ -1,3 +1,5 @@
 {
-  "txtId": "Id"
+  "txtId": "Id",
+  "txtVote": "Vote",
+  "txtVote__other": "Votes"
 }

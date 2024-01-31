@@ -14,12 +14,15 @@ i18next
     interpolation: {
       skipOnVariables: false,
     },
-    resources: { en, fr },
+    resources: {
+      en: { translation: en },
+      fr: { translation: fr },
+    },
     load: 'languageOnly',
+    lng: 'en',
     fallbackLng: 'en',
     supportedLngs: ['en', 'fr'],
   })
   .then();
 
 export default i18next;
-
