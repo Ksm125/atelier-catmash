@@ -16,11 +16,11 @@ describe('Preview', () => {
     expect(image).toHaveAttribute('alt', id);
   });
 
-  it('should render id and votes', () => {
+  it('should render id and vote', () => {
     render(<Preview url={url} id={id} votes={votes} />);
 
-    expect(screen.getByText(`id: ${id}`)).toBeInTheDocument();
-    expect(screen.getByText(`votes: ${votes}`)).toBeInTheDocument();
+    expect(screen.getByText(`Id: ${id}`)).toBeInTheDocument();
+    expect(screen.getByText(`Vote: ${votes}`)).toBeInTheDocument();
   });
 
   it('should render with correct className for container', () => {
