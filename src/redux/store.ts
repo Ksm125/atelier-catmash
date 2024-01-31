@@ -8,7 +8,7 @@ const createRootReducer = () =>
 
 export const setupStore = (preloadedState?: RootState) => {
   const store = configureStore({
-    reducer: {},
+    reducer: createRootReducer(),
     preloadedState,
   });
 
