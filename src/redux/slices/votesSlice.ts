@@ -1,7 +1,7 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
 import { type RootState } from '../store';
 
-type VoteState = Record<string, number>;
+export type VoteState = Record<string, number>;
 
 const ACTION_NAME = 'VOTE';
 
