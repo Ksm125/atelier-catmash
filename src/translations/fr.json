@@ -1,5 +1,8 @@
 {
   "txtId": "Id",
   "txtVote": "Vote",
-  "txtVote__other": "Votes"
+  "txtVote__other": "Votes",
+  "txtHomePage": "Page d'accueil",
+  "txtPoll": "Sondage",
+  "txtPoll_other": "Sondages"
 }
