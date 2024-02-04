@@ -1,0 +1,9 @@
+.home {
+  &__content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 40px;
+    gap: 20px;
+  }
+}
