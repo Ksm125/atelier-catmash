@@ -5,6 +5,15 @@
     border: var(--color-primary) solid 2px;
   }
 
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    gap: 10px;
+  }
+
   &__image {
     width: 400px;
     height: 600px;

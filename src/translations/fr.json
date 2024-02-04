@@ -1,8 +1,10 @@
 {
+  "txtHomePage": "Page d'accueil",
   "txtId": "Id",
+  "txtOr": "Ou",
+  "txtPoll": "Sondage",
+  "txtPoll_other": "Sondages",
   "txtVote": "Vote",
   "txtVote__other": "Votes",
-  "txtHomePage": "Page d'accueil",
-  "txtPoll": "Sondage",
-  "txtPoll_other": "Sondages"
+  "msgWhichIsYourFavourite": "Lequel est votre favori?"
 }

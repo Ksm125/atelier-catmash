@@ -1,8 +1,10 @@
 {
+  "txtHomePage": "Home page",
   "txtId": "Id",
+  "txtOr": "Or",
+  "txtPoll": "Poll",
+  "txtPoll_other": "Polls",
   "txtVote": "Vote",
   "txtVote__other": "Votes",
-  "txtHomePage": "Home page",
-  "txtPoll": "Poll",
-  "txtPoll_other": "Polls"
+  "msgWhichIsYourFavourite": "Which is your favourite?"
 }

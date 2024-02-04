@@ -8,9 +8,12 @@ export const PollPreview: FC<PollPreviewProps> = ({
   ...restProps
 }) => {
   return (
-    <button {...restProps} className={styles.pollPreview}>
-      <img src={url} alt={id} className={styles.pollPreview__image} />
-    </button>
+    <div className={styles.pollPreview__container}>
+      <button {...restProps} className={styles.pollPreview}>
+        <img src={url} alt={id} className={styles.pollPreview__image} />
+      </button>
+      <span className={styles.pollPreview__label}>{id}</span>
+    </div>
   );
 };
 
