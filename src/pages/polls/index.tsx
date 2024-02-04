@@ -1,5 +1,4 @@
 import { useDispatch } from 'react-redux';
-import { Header } from '../../components/Header';
 import { PollPreview } from '../../components/PollPreview';
 import { useGetCats } from '../../hooks/useGetCats';
 import { vote } from '../../redux/slices/votesSlice';
@@ -17,7 +16,6 @@ export const Polls = () => {
 
   return (
     <div className={styles.polls}>
-      <Header />
       <div className={styles.polls__content}>
         <PollPreview {...cat1} onClick={handleSelection(cat1?.id)} />
         <PollPreview {...cat2} onClick={handleSelection(cat2?.id)} />

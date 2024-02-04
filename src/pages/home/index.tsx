@@ -1,6 +1,5 @@
 import { useMemo } from 'react';
 import { useSelector } from 'react-redux';
-import { Header } from '../../components/Header';
 import { Preview } from '../../components/Preview';
 import { useGetCats } from '../../hooks/useGetCats';
 import { selectVotes } from '../../redux/slices/votesSlice';
@@ -18,7 +17,6 @@ export const Home = () => {
 
   return (
     <div className={styles.home}>
-      <Header />
       <div className={styles.home__content}>
         {/* No need to use virtualization as we only have 100 items */}
         {catsWithVotes.map((cat) => (

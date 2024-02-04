@@ -30,9 +30,12 @@ export function RenderWrapper({
   children,
   preloadedState = undefined,
   store = setupStore(preloadedState),
+  route,
 }: PropsWithChildren<
-  Pick<ExtendedRenderOptions, 'preloadedState' | 'store'>
+  Pick<ExtendedRenderOptions, 'preloadedState' | 'store' | 'route'>
 >): JSX.Element {
+  window.history.pushState({}, 'App', route);
+
   return (
     <Provider store={store}>
       <BrowserRouter>{children}</BrowserRouter>
@@ -52,10 +55,8 @@ function renderWithProviders(
     ...renderOptions
   }: ExtendedRenderOptions = {}
 ) {
-  window.history.pushState({}, 'App', route);
-
   const Wrapper = ({ children }: PropsWithChildren) =>
-    RenderWrapper({ children, preloadedState, store });
+    RenderWrapper({ children, preloadedState, store, route });
 
   return {
     store,
@@ -79,10 +80,8 @@ function renderHookWithProviders<
     ...renderOptions
   }: ExtendedRenderHookOptions<Props, Q, Container, BaseElement> = {}
 ) {
-  window.history.pushState({}, 'App', route);
-
   const Wrapper = ({ children }: PropsWithChildren) =>
-    RenderWrapper({ children, preloadedState, store });
+    RenderWrapper({ children, preloadedState, store, route });
 
   return {
     store,
