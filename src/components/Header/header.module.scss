@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-primary);
+
+  &__title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--color-text);
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+
+    a {
+      font-size: 16px;
+      font-weight: 500;
+      color: #000;
+      text-decoration: none;
+      &:hover {
+        color: #f00;
+      }
+    }
+  }
+}
