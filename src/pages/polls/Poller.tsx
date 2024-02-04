@@ -1,12 +1,12 @@
-import { FC } from 'react';
+import { FC, useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Cat } from 'src/schemas/cats';
 import { PollPreview } from '../../components/PollPreview';
 import { randomVersusCats } from './polls.const';
-import { useTranslation } from 'react-i18next';
 
 export const Poller: FC<PollerProps> = ({ cats, onSelection }) => {
-  const {t} = useTranslation();
-  const [cat1, cat2] = randomVersusCats(cats);
+  const { t } = useTranslation();
+  const [cat1, cat2] = useMemo(() => randomVersusCats(cats), [cats]);
 
   return (
     <>

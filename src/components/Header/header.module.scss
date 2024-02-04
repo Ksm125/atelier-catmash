@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
+  position: relative;
   padding: 20px 0;
   border-bottom: 1px solid var(--color-border);
   background-color: var(--color-primary);
@@ -28,5 +28,11 @@
         color: #f00;
       }
     }
+  }
+
+  &__language {
+    position: absolute;
+    top: 20px;
+    right: 20px;
   }
 }

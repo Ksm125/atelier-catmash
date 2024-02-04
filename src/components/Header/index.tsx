@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import { LanguageSelector } from '../LanguageSelector';
 import styles from './header.module.scss';
 
 export const Header = () => {
@@ -12,6 +13,7 @@ export const Header = () => {
         <Link to="/">{t('txtHomePage')}</Link>
         <Link to="/polls">{t('txtPoll')}</Link>
       </nav>
+      <LanguageSelector className={styles.header__language} />
     </div>
   );
 };
