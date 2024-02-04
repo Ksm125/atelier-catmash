@@ -9,7 +9,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://Ksm125.github.io/atelier-catmash",
+  "homepage": "https://ksm125.github.io/atelier-catmash",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^2.1.0",
