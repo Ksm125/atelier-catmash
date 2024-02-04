@@ -1,5 +1,7 @@
+import { Suspense } from 'react';
 import { Provider } from 'react-redux';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { Loader } from '../components/Loader';
 import { store } from '../redux/store';
 import { routes } from '../routes';
 
@@ -8,7 +10,9 @@ export const App = () => {
 
   return (
     <Provider store={store}>
-      <RouterProvider router={router} />/{' '}
+      <Suspense fallback={<Loader />}>
+        <RouterProvider router={router} />
+      </Suspense>
     </Provider>
   );
 };
