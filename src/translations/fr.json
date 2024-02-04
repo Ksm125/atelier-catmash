@@ -6,5 +6,7 @@
   "txtPoll_other": "Sondages",
   "txtVote": "Vote",
   "txtVote__other": "Votes",
-  "msgWhichIsYourFavourite": "Lequel est votre favori?"
+  "msgWhichIsYourFavourite": "Lequel est votre favori?",
+  "txtLike": "J'aime",
+  "txtLike__other": "J'aime"
 }
