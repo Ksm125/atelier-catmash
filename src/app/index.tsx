@@ -1,8 +1,9 @@
 import { Suspense } from 'react';
 import { Provider } from 'react-redux';
 import { RouterProvider, createHashRouter } from 'react-router-dom';
+import { PersistGate } from 'redux-persist/integration/react';
 import { Loader } from '../components/Loader';
-import { store } from '../redux/store';
+import { persistor, store } from '../redux/store';
 import { routes } from '../routes';
 
 export const App = () => {
@@ -10,9 +11,11 @@ export const App = () => {
 
   return (
     <Provider store={store}>
-      <Suspense fallback={<Loader />}>
-        <RouterProvider router={router} />
-      </Suspense>
+      <PersistGate loading={<Loader />} persistor={persistor}>
+        <Suspense fallback={<Loader />}>
+          <RouterProvider router={router} />
+        </Suspense>
+      </PersistGate>
     </Provider>
   );
 };
