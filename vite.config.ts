@@ -6,7 +6,7 @@ import svgr from 'vite-plugin-svgr';
 
 export default defineConfig({
   root: __dirname,
-  base: '/atelier-catmash/',
+  base: './',
   cacheDir: './node_modules/.vite/.',
 
   server: {
